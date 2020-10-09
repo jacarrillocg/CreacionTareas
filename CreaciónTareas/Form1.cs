@@ -11,15 +11,16 @@ namespace CreaciónTareas
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             tblResultado.Rows.Clear();
             GenerarFilasResultado();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            InsertaRegistrosPrueba();
+            InsertaCategoriaTareas();
         }
 
         private void GenerarFilasResultado()
@@ -46,7 +47,7 @@ namespace CreaciónTareas
                     string contadorCheckedItems = j.ToString("D2"); //Almacena el indice de la tarea para el componente actual: "01.01 Entendimiento"
                     var row = tblCategoryTask.Rows[j];
 
-                    decimal time = 0;
+                    decimal time;
                     if (tblComponentes.Rows[i].Cells[1].Value == null)
                     {
                         time = 0;
@@ -71,38 +72,41 @@ namespace CreaciónTareas
             lblcantidadFilas.Text = tblResultado.Rows.Count.ToString();
         }
 
+        /// <summary>
+        /// Árma la estructura del título en el primer nivel (nombre del componente)
+        /// </summary>
+        /// <param name="indexFilaComponente"></param>
+        /// <param name="IndexLvl1Value"></param>
+        /// <returns></returns>
         private string GenerarTextoTitulo1(int indexFilaComponente, string IndexLvl1Value)
         {
-            string resultado = string.Empty;
-
             string Nombre = tblComponentes.Rows[indexFilaComponente].Cells[0].Value.ToString();
-
-            resultado = string.Format("{0} {1}: {2} {3}", txtTipo.Text, txtID.Text, IndexLvl1Value, Nombre);
-
+            string resultado = string.Format("{0} {1}: {2} {3}", txtTipo.Text, txtID.Text, IndexLvl1Value, Nombre);
             return resultado;
         }
 
+        /// <summary>
+        /// Árma la estructura del título nivel 2 (Nivel de la tarea con tiempos)
+        /// </summary>
+        /// <param name="TextoTarea"></param>
+        /// <param name="IndexLvl1Value"></param>
+        /// <param name="contadorCheckedItems"></param>
+        /// <returns></returns>
         private string GenerarTextoTitulo2(string TextoTarea, string IndexLvl1Value, string contadorCheckedItems)
         {
-            string resultado = string.Empty;
-
-            resultado = string.Format("{0} {1}: Task {2}.{3} {4}", txtTipo.Text, txtID.Text, IndexLvl1Value, contadorCheckedItems, TextoTarea);
-
+            string resultado = string.Format("{0} {1}: Task {2}.{3} {4}", txtTipo.Text, txtID.Text, IndexLvl1Value, contadorCheckedItems, TextoTarea);
             return resultado;
         }
 
-        private void insertaRegistrosPrueba()
+        /// <summary>
+        /// Para armar las pruebas rápidamente metemos datos temporales
+        /// </summary>
+        private void InsertaRegistrosPrueba()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 5; i++)
             {
                 tblComponentes.Rows.Add("AngularComponent" + i.ToString(), "1");
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            insertaRegistrosPrueba();
-            InsertaCategoriaTareas();
         }
 
         private void InsertaCategoriaTareas()
@@ -174,21 +178,6 @@ namespace CreaciónTareas
                 result = total * percentageValue;
             }
             return result;
-        }
-
-        private void tblComponentes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
     }
 }

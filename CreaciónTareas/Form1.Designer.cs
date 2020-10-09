@@ -83,7 +83,6 @@
             this.label1.Size = new System.Drawing.Size(169, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tipo de item principal";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtTipo
             // 
@@ -143,7 +142,7 @@
             this.tblComponentes.RowTemplate.Height = 24;
             this.tblComponentes.Size = new System.Drawing.Size(928, 261);
             this.tblComponentes.TabIndex = 8;
-            this.tblComponentes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblComponentes_CellContentClick);
+
             // 
             // Tarea
             // 
@@ -205,7 +204,6 @@
             this.label5.Size = new System.Drawing.Size(164, 29);
             this.label5.TabIndex = 12;
             this.label5.Text = "Componentes";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button2
             // 
@@ -275,7 +273,7 @@
             this.label6.Size = new System.Drawing.Size(224, 29);
             this.label6.TabIndex = 12;
             this.label6.Text = "Categoría de tareas";
-            this.label6.Click += new System.EventHandler(this.label5_Click);
+
             // 
             // statusStrip1
             // 
@@ -290,7 +288,7 @@
             this.statusStrip1.Size = new System.Drawing.Size(1652, 26);
             this.statusStrip1.TabIndex = 16;
             this.statusStrip1.Text = "statusStrip1";
-            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
+
             // 
             // toolStripStatusLabel2
             // 
