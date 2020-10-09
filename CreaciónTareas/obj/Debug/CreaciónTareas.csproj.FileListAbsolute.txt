@@ -18,3 +18,13 @@ C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\obj\Debug\Cr
 C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\obj\Debug\CreaciónTareas.csproj.CoreCompileInputs.cache
 C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\obj\Debug\CreaciónTareas.exe
 C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\obj\Debug\CreaciónTareas.pdb
+C:\Users\jose.carrillo\source\repos\CreacionTareas\CreacionTareas\CreaciónTareas\bin\Debug\CreaciónTareas.exe.config
+C:\Users\jose.carrillo\source\repos\CreacionTareas\CreacionTareas\CreaciónTareas\bin\Debug\CreaciónTareas.exe
+C:\Users\jose.carrillo\source\repos\CreacionTareas\CreacionTareas\CreaciónTareas\bin\Debug\CreaciónTareas.pdb
+C:\Users\jose.carrillo\source\repos\CreacionTareas\CreacionTareas\CreaciónTareas\obj\Debug\CreaciónTareas.csprojAssemblyReference.cache
+C:\Users\jose.carrillo\source\repos\CreacionTareas\CreacionTareas\CreaciónTareas\obj\Debug\CreaciónTareas.Form1.resources
+C:\Users\jose.carrillo\source\repos\CreacionTareas\CreacionTareas\CreaciónTareas\obj\Debug\CreaciónTareas.Properties.Resources.resources
+C:\Users\jose.carrillo\source\repos\CreacionTareas\CreacionTareas\CreaciónTareas\obj\Debug\CreaciónTareas.csproj.GenerateResource.cache
+C:\Users\jose.carrillo\source\repos\CreacionTareas\CreacionTareas\CreaciónTareas\obj\Debug\CreaciónTareas.csproj.CoreCompileInputs.cache
+C:\Users\jose.carrillo\source\repos\CreacionTareas\CreacionTareas\CreaciónTareas\obj\Debug\CreaciónTareas.exe
+C:\Users\jose.carrillo\source\repos\CreacionTareas\CreacionTareas\CreaciónTareas\obj\Debug\CreaciónTareas.pdb
