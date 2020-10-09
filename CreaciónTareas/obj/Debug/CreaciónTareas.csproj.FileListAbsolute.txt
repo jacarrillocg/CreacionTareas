@@ -1,0 +1,20 @@
+C:\Users\josue.garcia\Downloads\CreaciónTareas (1)\CreaciónTareas\obj\Debug\CreaciónTareas.csprojAssemblyReference.cache
+C:\Users\josue.garcia\Downloads\CreaciónTareas (1)\CreaciónTareas\obj\Debug\CreaciónTareas.Form1.resources
+C:\Users\josue.garcia\Downloads\CreaciónTareas (1)\CreaciónTareas\obj\Debug\CreaciónTareas.Properties.Resources.resources
+C:\Users\josue.garcia\Downloads\CreaciónTareas (1)\CreaciónTareas\obj\Debug\CreaciónTareas.csproj.GenerateResource.cache
+C:\Users\josue.garcia\Downloads\CreaciónTareas (1)\CreaciónTareas\obj\Debug\CreaciónTareas.csproj.CoreCompileInputs.cache
+C:\Users\josue.garcia\Downloads\CreaciónTareas (1)\CreaciónTareas\obj\Debug\CreaciónTareas.exe
+C:\Users\josue.garcia\Downloads\CreaciónTareas (1)\CreaciónTareas\obj\Debug\CreaciónTareas.pdb
+C:\Users\josue.garcia\Downloads\CreaciónTareas (1)\CreaciónTareas\bin\Debug\CreaciónTareas.exe.config
+C:\Users\josue.garcia\Downloads\CreaciónTareas (1)\CreaciónTareas\bin\Debug\CreaciónTareas.exe
+C:\Users\josue.garcia\Downloads\CreaciónTareas (1)\CreaciónTareas\bin\Debug\CreaciónTareas.pdb
+C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\bin\Debug\CreaciónTareas.exe.config
+C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\bin\Debug\CreaciónTareas.exe
+C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\bin\Debug\CreaciónTareas.pdb
+C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\obj\Debug\CreaciónTareas.csprojAssemblyReference.cache
+C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\obj\Debug\CreaciónTareas.Form1.resources
+C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\obj\Debug\CreaciónTareas.Properties.Resources.resources
+C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\obj\Debug\CreaciónTareas.csproj.GenerateResource.cache
+C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\obj\Debug\CreaciónTareas.csproj.CoreCompileInputs.cache
+C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\obj\Debug\CreaciónTareas.exe
+C:\Users\jose.carrillo\source\repos\CreaciónTareas\CreaciónTareas\obj\Debug\CreaciónTareas.pdb
