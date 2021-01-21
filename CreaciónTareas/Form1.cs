@@ -25,51 +25,59 @@ namespace CreaciónTareas
 
         private void GenerarFilasResultado()
         {
-            int totalFilas = tblComponentes.Rows.Count;
-            for (int i = 0; i < totalFilas; i++)//recorremos componentes
+            try
             {
-                if (tblComponentes.Rows[i].Cells[0].Value == null)
+                int totalFilas = tblComponentes.Rows.Count;
+                for (int i = 0; i < totalFilas; i++)//recorremos componentes
                 {
-                    continue;
-                }
-                string IndexLvl1Value = (i + 1).ToString("D2");  //Permite llevar el numeral del componente: "01 Componente"
-
-
-                tblResultado.Rows.Add(GenerarTextoTitulo1(i, IndexLvl1Value), "");
-                
-                for(int j=0; j<tblCategoryTask.Rows.Count; j++)//recorremos las categorías de las tareas
-                {
-                     if(tblCategoryTask.Rows[j].Cells[0].Value == null)//nos saltamos la categoría si no tiene la primer columna con check
-                        continue;
-                    if (tblCategoryTask.Rows[j].Cells[0].Value.ToString() != "1")
-                        continue;
-
-                    string contadorCheckedItems = j.ToString("D2"); //Almacena el indice de la tarea para el componente actual: "01.01 Entendimiento"
-                    var row = tblCategoryTask.Rows[j];
-
-                    decimal time;
-                    if (tblComponentes.Rows[i].Cells[1].Value == null)
+                    if (tblComponentes.Rows[i].Cells[0].Value == null)
                     {
-                        time = 0;
+                        continue;
                     }
-                    else
+                    string IndexLvl1Value = (i + 1).ToString("D2");  //Permite llevar el numeral del componente: "01 Componente"
+
+
+                    tblResultado.Rows.Add(GenerarTextoTitulo1(i, IndexLvl1Value), "");
+
+                    for (int j = 0; j < tblCategoryTask.Rows.Count; j++)//recorremos las categorías de las tareas
                     {
-                        time= CalculaTiemposPorTarea(
-                            int.Parse(tblComponentes.Rows[i].Cells[1].Value.ToString() != "" ? tblComponentes.Rows[i].Cells[1].Value.ToString() : "0"),
-                            int.Parse(row.Cells[2].FormattedValue.ToString() != "" ? row.Cells[2].FormattedValue.ToString() : "0"));
+                        if (tblCategoryTask.Rows[j].Cells[0].Value == null)//nos saltamos la categoría si no tiene la primer columna con check
+                            continue;
+                        if (tblCategoryTask.Rows[j].Cells[0].Value.ToString() != "1")
+                            continue;
+
+                        string contadorCheckedItems = j.ToString("D2"); //Almacena el indice de la tarea para el componente actual: "01.01 Entendimiento"
+                        var row = tblCategoryTask.Rows[j];
+
+                        float time;
+                        if (tblComponentes.Rows[i].Cells[1].Value == null)
+                        {
+                            time = 0;
+                        }
+                        else
+                        {
+                            time = CalculaTiemposPorTarea(
+                                float.Parse(tblComponentes.Rows[i].Cells[1].Value.ToString() != "" ? tblComponentes.Rows[i].Cells[1].Value.ToString() : "0"),
+                                float.Parse(row.Cells[2].FormattedValue.ToString() != "" ? row.Cells[2].FormattedValue.ToString() : "0"));
+                        }
+
+
+
+                        tblResultado.Rows.Add("",
+                                            GenerarTextoTitulo2(row.Cells[1].FormattedValue.ToString(),
+                                            IndexLvl1Value,
+                                            contadorCheckedItems),
+                                            time <= 0 ? "" : time.ToString());
                     }
-
-                        
-
-                    tblResultado.Rows.Add("",
-                                        GenerarTextoTitulo2(row.Cells[1].FormattedValue.ToString(), 
-                                        IndexLvl1Value, 
-                                        contadorCheckedItems),
-                                        time<=0?"": time.ToString());
                 }
+
+                lblcantidadFilas.Text = tblResultado.Rows.Count.ToString();
             }
-
-            lblcantidadFilas.Text = tblResultado.Rows.Count.ToString();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+          
         }
 
         /// <summary>
@@ -111,12 +119,12 @@ namespace CreaciónTareas
 
         private void InsertaCategoriaTareas()
         {
-            tblCategoryTask.Rows.Add(1, "Entendimiento", 20);
-            tblCategoryTask.Rows.Add(1, "Elaboración de código", 50);
-            tblCategoryTask.Rows.Add(1, "Elaboración de pruebas unitarias", 20);
+            tblCategoryTask.Rows.Add(1, "Entendimiento", 10);
+            tblCategoryTask.Rows.Add(1, "Elaboración de código", 65);
+            tblCategoryTask.Rows.Add(1, "Elaboración de pruebas unitarias", 15);
             tblCategoryTask.Rows.Add(1, "Review", 10);
-            tblCategoryTask.Rows.Add(1, "PeerReview", 0);
-            tblCategoryTask.Rows.Add(1, "Pruebas", 0);
+            tblCategoryTask.Rows.Add(0, "PeerReview", 0);
+            tblCategoryTask.Rows.Add(0, "Pruebas", 0);
             tblCategoryTask.Rows.Add(0, "Posmortem", 0);
 
         }
@@ -169,12 +177,12 @@ namespace CreaciónTareas
             tblComponentes.Rows.Clear();
         }
 
-        private decimal CalculaTiemposPorTarea(int total, int percentage)
+        private float CalculaTiemposPorTarea(float total, float percentage)
         {
-            decimal result = 0M;
+            float result = 0;
             if (percentage > 0)
             {
-                decimal percentageValue = percentage / 100M;
+                float percentageValue = percentage / 100;
                 result = total * percentageValue;
             }
             return result;
